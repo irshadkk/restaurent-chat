@@ -1,0 +1,3 @@
+https://medium.com/@coderacademy/you-can-build-an-fb-messenger-style-chat-app-with-reactjs-heres-how-intermediate-211b523838ad
+https://github.com/paul-pagnan/react-instant-chat
+https://github.com/paul-pagnan/simple-chat-api
