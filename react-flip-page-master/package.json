@@ -1,0 +1,90 @@
+{
+    "name": "react-flip-page",
+    "version": "1.2.0",
+    "description": "A React.js implementation of the Flipboard page swipe.",
+    "main": "dist/index.js",
+    "files": [
+        "dist/"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/darenju/react-flip-page.git"
+    },
+    "author": "Julien Fradin",
+    "contributors": [
+        "Everton Nikolas de Oliveira <enikolas.oliveira@gmail.com> (https://br.linkedin.com/in/enikolas/en)",
+        "Dmitry Buravtsov (https://github.com/DimaBur)",
+        "slevy85 (https://github.com/slevy85)"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/darenju/react-flip-page/issues"
+    },
+    "homepage": "https://github.com/darenju/react-flip-page",
+    "keywords": [
+        "react-component",
+        "react",
+        "flip",
+        "flip-page",
+        "page",
+        "flipboard"
+    ],
+    "scripts": {
+        "prebuild": "check-dependencies",
+        "pretest": "check-dependencies",
+        "build": "webpack",
+        "lint": "eslint --ext .jsx --ext .js --ignore-pattern *spec* --quiet src/",
+        "test": "jest",
+        "test:coverage": "jest --coverage"
+    },
+    "precommit": [
+        "lint",
+        "test"
+    ],
+    "jest": {
+        "setupTestFrameworkScriptFile": "<rootDir>/src/enzymeSetup.js",
+        "moduleNameMapper": {
+            "\\.(css|svg)$": "identity-obj-proxy"
+        },
+        "coverageDirectory": "coverage",
+        "coveragePathIgnorePatterns": [
+            "<rootDir>/dist/",
+            "<rootDir>/src/enzymeSetup.js"
+        ],
+        "testURL": "http://localhost"
+    },
+    "dependencies": {
+        "babel-core": "^7.0.0-bridge.0",
+        "prop-types": "^15.6.2",
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "uglifyjs-webpack-plugin": "^1.2.7"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.0.0",
+        "@babel/preset-env": "^7.0.0",
+        "@babel/preset-react": "^7.0.0",
+        "@babel/register": "^7.0.0",
+        "babel-loader": "8.0.2",
+        "check-dependencies": "^1.1.0",
+        "css-loader": "^0.28.5",
+        "enzyme": "^3.5.1",
+        "enzyme-adapter-react-16": "^1.4.0",
+        "eslint": "^4.17.0",
+        "eslint-config-airbnb": "^17.0.0",
+        "eslint-plugin-import": "^2.13.0",
+        "eslint-plugin-jsx-a11y": "^6.1.0",
+        "eslint-plugin-react": "^7.10.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^23.5.0",
+        "path": "^0.12.7",
+        "pre-commit": "^1.2.2",
+        "style-loader": "^0.23.0",
+        "svg-url-loader": "^2.1.1",
+        "webpack": "^4.15.1",
+        "webpack-cli": "^3.0.0"
+    },
+    "peerDependencies": {
+        "react-dom": "^16.2.0"
+    }
+}

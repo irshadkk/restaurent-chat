@@ -1,0 +1,9 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "jest": true
+    },
+    "rules": {
+        "react/destructuring-assignment": ["always"]
+    }
+}
