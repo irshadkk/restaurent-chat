@@ -18,7 +18,7 @@ class ChatApp extends React.Component {
     this.socket = io(config.api, { query: `username=${props.username}` }).connect();
 
     // Listen for messages from the server
-    this.socket.on('server:message', message => {
+    this.socket.on('server:message', message => { 
       this.addMessage(message);
     });
   }
@@ -36,8 +36,7 @@ class ChatApp extends React.Component {
     this.addMessage(messageObject);
   }
 
-  addMessage(message) {
-    alert(JSON.stringify(message))
+  addMessage(message) { 
     // Append the message to the component state
     const messages = this.state.messages;
     messages.push(message);

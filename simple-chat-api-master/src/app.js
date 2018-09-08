@@ -31,10 +31,11 @@ socketIo.on('connection', socket => {
   socket.on('client:message', data => {
     console.log(`${data.username}:------ ${data.message}`);
 
-    // message received from client, now broadcast it to everyone else
+    // message received from client, now broadcast it to everyone else ohter than the sender
     //socket.broadcast.emit('server:message', data);
-    var _responseData={username:'waiter',message:'hi how are you'};
-    socket.broadcast.emit('server:message', _responseData);
+    var _responseData={username:'waiter',message:'Hello dear '+data.username+',thanks for choosing to order food with us!'+
+    'Click on the following link to see our Menu and choose from that'};
+    socket.emit('server:message', _responseData);
   });
 
   socket.on('disconnect', () => {
