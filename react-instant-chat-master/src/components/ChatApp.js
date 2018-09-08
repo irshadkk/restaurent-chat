@@ -37,6 +37,7 @@ class ChatApp extends React.Component {
   }
 
   addMessage(message) {
+    alert(JSON.stringify(message))
     // Append the message to the component state
     const messages = this.state.messages;
     messages.push(message);
